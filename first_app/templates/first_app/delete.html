@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block content%}
+<h1>Delete</h1>
+<div>
+  <h1>Enter roll number to delete the record :</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="">Roll Number :  : </label>
+      <input class="form-control" type="text" name="roll_no" id="roll_no" placeholder="ex: 1,2,3..">
+    </div>
+    <input class = "btn btn-primary" type="submit" value="Delete">
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="container">
+    <h1>List of Students : </h1>
+  <ul>
+  {% for student in students%}
+    <li>
+    {{ student }} <a href="{{student.id}}">Update</a>
+    </li>
+  {% endfor %}
+  </ul>
+  </div>
+{% endblock %}
